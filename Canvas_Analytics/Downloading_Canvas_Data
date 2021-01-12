@@ -1,0 +1,17 @@
+install.packages('devtools')
+library('devtools')
+#rcanvas
+install_github('daranzolin/rcanvas')
+library('rcanvas')
+set_canvas_token("12298~irnkD4HGvL1c3QXEd0kwRSWENzAoLjdC4oZ3mWPar908HGgKA3YMEkn28UdnFLOl")
+set_canvas_domain("https://canvas.okstate.edu")
+Coursse_Activity <- get_course_analytics_data(course_id = 85672, type = "activity")
+Course_Student_Summary <- get_course_analytics_data(course_id = 85672, type = "student_summaries")
+
+#bRush
+install_github('erikpal/bRush')
+library('bRush')
+Course_Data <- getAnalytics(85672, type = "activity", term = "current")
+loadURL(COURSEURL)
+COURSEURL="https://canvas.okstate.edu"
+COURSE_DOMAIN="12298~irnkD4HGvL1c3QXEd0kwRSWENzAoLjdC4oZ3mWPar908HGgKA3YMEkn28UdnFLOl"
